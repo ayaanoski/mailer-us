@@ -1,0 +1,8 @@
+services:
+  mail-relay:
+    image: axllent/mailpit
+    container_name: mailer-local-relay
+    ports:
+      - "127.0.0.1:2525:1025"
+      - "127.0.0.1:8025:8025"
+    restart: unless-stopped

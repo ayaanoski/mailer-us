@@ -1,0 +1,17 @@
+compatibility_level = 3.6
+maillog_file = /dev/stdout
+myhostname = mail-relay.local
+myorigin = $myhostname
+inet_interfaces = all
+inet_protocols = ipv4
+mydestination =
+relayhost =
+mynetworks = 127.0.0.0/8 172.16.0.0/12 192.168.0.0/16
+smtpd_relay_restrictions = permit_mynetworks,reject
+smtpd_recipient_restrictions = permit_mynetworks,reject
+smtp_tls_security_level = may
+smtp_tls_loglevel = 1
+smtputf8_enable = yes
+biff = no
+append_dot_mydomain = no
+readme_directory = no
